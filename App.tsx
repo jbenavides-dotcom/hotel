@@ -3,7 +3,7 @@ import React from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import TourSection from './components/TourSection';
-import Experience from './components/Experience';
+
 import LocationSection from './components/LocationSection';
 import { BOOKING_URL, ASSETS, SOCIAL_LINKS, CONTACT_INFO, COFFEE_TOUR_INFO } from './constants';
 import { MessageCircle } from 'lucide-react';
@@ -17,8 +17,6 @@ const App: React.FC = () => {
         <Hero />
 
         <TourSection />
-
-        <Experience />
 
         <LocationSection />
 
