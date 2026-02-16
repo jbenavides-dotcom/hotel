@@ -29,7 +29,7 @@ export const ASSETS = {
   CASCADA: "https://res.cloudinary.com/dsylu9a7k/image/upload/lpet/cascada.png",
   LAGUNA: "https://res.cloudinary.com/dsylu9a7k/image/upload/lpet/laguna-pedro-palo.png",
   HUERTA: "https://res.cloudinary.com/dsylu9a7k/image/upload/lpet/huerta.png",
-  YOGA: "https://res.cloudinary.com/dsylu9a7k/image/upload/lpet/yoga.png",
+  YOGA: "https://res.cloudinary.com/dsylu9a7k/image/upload/a_90/lpet/yoga.png",
   CABALGATA: "https://res.cloudinary.com/dsylu9a7k/image/upload/lpet/cabalgata.png",
   EVENTOS: "https://res.cloudinary.com/dsylu9a7k/image/upload/lpet/eventos.png",
 };
