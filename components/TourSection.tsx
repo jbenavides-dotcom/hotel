@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { TOUR_STEPS, BOOKING_URL, ASSETS, COFFEE_TOUR_INFO } from '../constants';
-import { Award, ChevronRight, Check, MessageCircle, Star } from 'lucide-react';
+import { Award, ChevronRight, Check, MessageCircle, Coffee, TreePine, Users, Sparkles, Leaf, GlassWater } from 'lucide-react';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 
 const TourSection: React.FC = () => {
@@ -14,26 +14,39 @@ const TourSection: React.FC = () => {
     <section id="tour" className="py-16 sm:py-24 lg:py-32 bg-brand-light">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
 
-        {/* ¿POR QUÉ EL COFFEE TRAIL? */}
-        <div ref={whyReveal.ref} className={`text-center max-w-3xl mx-auto mb-16 sm:mb-20 lg:mb-24 ${whyReveal.isVisible ? 'scroll-visible' : 'scroll-hidden'}`}>
-          <h4 className="text-brand-pink text-xs uppercase tracking-[0.4em] font-bold mb-3 sm:mb-4">¿Por qué La Palma & El Tucán?</h4>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-brand-dark mb-4 sm:mb-6">No es solo un tour de café</h2>
-          <p className="text-neutral-600 font-light text-base sm:text-lg mb-8 sm:mb-10">Es una experiencia que transforma tu forma de consumir.</p>
+        {/* ¿POR QUÉ LA PALMA & EL TUCÁN? */}
+        <div ref={whyReveal.ref} className={`relative mb-16 sm:mb-20 lg:mb-24 ${whyReveal.isVisible ? 'scroll-visible' : 'scroll-hidden'}`}>
+          <div className="absolute top-0 left-0 w-64 h-64 bg-brand-pink/5 blur-[120px] rounded-full"></div>
+          <div className="absolute bottom-0 right-0 w-80 h-80 bg-brand-gold/5 blur-[120px] rounded-full"></div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 text-left">
-            {[
-              "Finca cafetera reconocida mundialmente por sus cafés especiales",
-              "Recorrido completo: de la tierra a la taza",
-              "Degustación profesional de variedades exclusivas",
-              "Naturaleza viva en bosque de niebla",
-              "Grupos pequeños y experiencia personalizada",
-              "Agricultura regenerativa y sostenibilidad"
-            ].map((item, idx) => (
-              <div key={idx} className="flex items-start gap-3 bg-white p-4 sm:p-5 rounded-xl shadow-sm">
-                <Star className="w-4 h-4 text-brand-pink mt-0.5 flex-shrink-0" />
-                <span className="text-neutral-700 text-sm">{item}</span>
-              </div>
-            ))}
+          <div className="relative z-10">
+            <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
+              <span className="text-brand-pink text-xs uppercase tracking-[0.4em] font-bold mb-3 sm:mb-4 block">¿Por qué elegirnos?</span>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif text-brand-dark mb-4 sm:mb-6">No es solo un tour de café</h2>
+              <p className="text-neutral-500 font-light text-base sm:text-lg">Es una experiencia que transforma tu relación con el café, la naturaleza y el consumo consciente.</p>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5">
+              {[
+                { icon: <Coffee className="w-5 h-5" />, title: "Cafés de clase mundial", text: "Finca reconocida internacionalmente por variedades como Gesha, Sidra y Mokka." },
+                { icon: <Sparkles className="w-5 h-5" />, title: "De la tierra a la taza", text: "Recorrido completo por cafetales, planta de procesamiento y degustación profesional." },
+                { icon: <GlassWater className="w-5 h-5" />, title: "Degustación exclusiva", text: "Cata guiada de 3 variedades premium con análisis sensorial." },
+                { icon: <TreePine className="w-5 h-5" />, title: "Bosque de niebla", text: "Naturaleza viva a 1.700 msnm entre montañas y biodiversidad." },
+                { icon: <Users className="w-5 h-5" />, title: "Grupos pequeños", text: "Experiencia personalizada e íntima con guías expertos." },
+                { icon: <Leaf className="w-5 h-5" />, title: "Agricultura regenerativa", text: "Sostenibilidad real: compostaje, biochar e insumos orgánicos." },
+              ].map((item, idx) => (
+                <div
+                  key={idx}
+                  className="group bg-white border border-brand-beige/30 p-6 sm:p-7 rounded-2xl hover:bg-brand-pink/5 hover:border-brand-pink/30 hover:shadow-lg transition-all duration-300"
+                >
+                  <div className="w-12 h-12 rounded-xl bg-brand-pink/10 flex items-center justify-center text-brand-pink mb-4 group-hover:bg-brand-pink group-hover:text-white transition-all duration-300">
+                    {item.icon}
+                  </div>
+                  <h3 className="text-brand-dark font-bold text-sm sm:text-base mb-1.5">{item.title}</h3>
+                  <p className="text-neutral-500 text-xs sm:text-sm leading-relaxed">{item.text}</p>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
 
