@@ -1,0 +1,7 @@
+{
+  "name": "Copy of La Palma & El Tucán | Coffee Experience",
+  "description": "Landing page de lujo para promover el tour de café de un día y la estancia en el hotel boutique La Palma & El Tucán.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
