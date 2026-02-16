@@ -62,7 +62,7 @@ export const CONTACT_INFO = {
   phoneInfo: "+573209306834",
   phoneInfoDisplay: "(+57) 320 930 6834",
   address: "Zipacón, Cundinamarca, Colombia",
-  googleMaps: "https://www.google.com/maps/search/La+Palma+y+El+Tucan+Hotel+Zipacon+Cundinamarca",
+  googleMaps: "https://maps.app.goo.gl/sdUhnJ25tacUYt77A",
   // WhatsApp de reservas (humano)
   whatsappReservas: "https://wa.me/573189565617",
   // WhatsApp de info (AI)
@@ -123,8 +123,8 @@ export const TOUR_STEPS = [
     image: ASSETS.PLANTA_CAFE
   },
   {
-    title: "Degustación de Especialidad",
-    description: "Degustación guiada de 3 cafés de especialidad: Gesha, Sidra y Mokka. Identifica aromas, notas sensoriales y aprende a preparar café de especialidad en casa.",
+    title: "Degustación de Cafés de Especialidad",
+    description: "Degustación guiada de 3 cafés de especialidad. Identifica aromas, notas sensoriales y aprende a preparar café de especialidad en casa.",
     image: ASSETS.DEGUSTACION_CAFE
   }
 ];

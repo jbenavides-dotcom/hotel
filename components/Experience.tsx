@@ -1,7 +1,6 @@
 
 import React from 'react';
-import { EXPERIENCE_HIGHLIGHTS, ASSETS } from '../constants';
-import { Utensils, Leaf, Footprints } from 'lucide-react';
+import { ASSETS } from '../constants';
 import { useScrollReveal } from '../hooks/useScrollReveal';
 
 const Experience: React.FC = () => {
@@ -37,19 +36,6 @@ const Experience: React.FC = () => {
               Nuestra experiencia culinaria es una extensión de nuestra filosofía. Disfruta de un almuerzo artesanal preparado con ingredientes frescos cultivados en nuestra propia huerta orgánica.
             </p>
 
-            <div className="space-y-4 sm:space-y-6">
-              {EXPERIENCE_HIGHLIGHTS.map((item, idx) => (
-                <div key={idx} className="flex items-start gap-4 sm:gap-6 group">
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-brand-beige/20 flex items-center justify-center text-brand-pink group-hover:bg-brand-pink group-hover:text-white transition-all flex-shrink-0">
-                    {item.icon}
-                  </div>
-                  <div>
-                    <h5 className="font-bold uppercase tracking-widest text-xs mb-1">{item.label}</h5>
-                    <p className="text-neutral-500 text-xs">Conexión genuina con la tierra y el entorno.</p>
-                  </div>
-                </div>
-              ))}
-            </div>
           </div>
         </div>
       </div>
