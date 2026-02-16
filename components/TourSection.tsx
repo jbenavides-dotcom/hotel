@@ -30,7 +30,7 @@ const TourSection: React.FC = () => {
               {[
                 { icon: <Coffee className="w-5 h-5" />, title: "Cafés de clase mundial", text: "Finca reconocida internacionalmente por variedades como Gesha, Sidra y Mokka." },
                 { icon: <Sparkles className="w-5 h-5" />, title: "De la tierra a la taza", text: "Recorrido completo por cafetales, planta de procesamiento y degustación profesional." },
-                { icon: <GlassWater className="w-5 h-5" />, title: "Degustación exclusiva", text: "Cata guiada de 3 variedades premium con análisis sensorial." },
+                { icon: <GlassWater className="w-5 h-5" />, title: "Degustación de Cafés de Especialidad", text: "Degustación guiada de 3 cafés de especialidad. Identifica aromas, notas sensoriales y aprende a preparar café de especialidad en casa." },
                 { icon: <TreePine className="w-5 h-5" />, title: "Bosque de niebla", text: "Naturaleza viva a 1.700 msnm entre montañas y biodiversidad." },
                 { icon: <Users className="w-5 h-5" />, title: "Grupos pequeños", text: "Experiencia personalizada e íntima con guías expertos." },
                 { icon: <Leaf className="w-5 h-5" />, title: "Agricultura regenerativa", text: "Sostenibilidad real: compostaje, biochar e insumos orgánicos." },
