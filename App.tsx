@@ -3,7 +3,6 @@ import React from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import TourSection from './components/TourSection';
-import Experiences from './components/Experiences';
 import LocationSection from './components/LocationSection';
 import { BOOKING_URL, ASSETS, SOCIAL_LINKS, CONTACT_INFO, COFFEE_TOUR_INFO } from './constants';
 import { MessageCircle } from 'lucide-react';
@@ -17,8 +16,6 @@ const App: React.FC = () => {
         <Hero />
 
         <TourSection />
-
-        <Experiences />
 
         <LocationSection />
 
@@ -97,8 +94,7 @@ const App: React.FC = () => {
             <ul className="space-y-3 sm:space-y-4 lg:space-y-5 text-xs text-white/50 font-medium">
               <li><a href="#hero" className="hover:text-white transition-colors">Home</a></li>
               <li><a href="#tour" className="hover:text-white transition-colors">El Coffee Tour</a></li>
-              <li><a href="#experience" className="hover:text-white transition-colors">Experiencias</a></li>
-              <li><a href="#location" className="hover:text-white transition-colors">Ubicación</a></li>
+                            <li><a href="#location" className="hover:text-white transition-colors">Ubicación</a></li>
             </ul>
           </div>
 

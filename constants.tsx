@@ -82,7 +82,6 @@ export const SOCIAL_LINKS = {
 export const NAV_LINKS: NavLink[] = [
   { label: 'Home', href: '#hero' },
   { label: 'Coffee Tour', href: '#tour' },
-  { label: 'Experiencia', href: '#experience' },
   { label: 'Ubicación', href: '#location' },
   { label: 'Contacto', href: '#footer' },
 ];
