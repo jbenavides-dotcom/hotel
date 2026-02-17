@@ -4,7 +4,7 @@ import react from '@vitejs/plugin-react';
 import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
-  base: '/hotel/',
+  base: '/',
   server: {
     port: 3005,
     host: '0.0.0.0',
