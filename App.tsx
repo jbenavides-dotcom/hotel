@@ -27,6 +27,8 @@ const App: React.FC = () => {
                className="w-full h-full object-cover opacity-30"
                alt="Reserva tu Coffee Tour en La Palma & El Tucán"
                loading="lazy"
+               width="800"
+               height="600"
              />
              <div className="absolute inset-0 bg-brand-pink/20 mix-blend-multiply"></div>
           </div>
