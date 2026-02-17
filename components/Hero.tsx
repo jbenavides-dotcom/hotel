@@ -76,10 +76,6 @@ const Hero: React.FC = () => {
         </div>
       </div>
 
-      <div className="absolute bottom-6 sm:bottom-10 left-1/2 -translate-x-1/2 hidden sm:flex flex-col items-center gap-4 text-white/40 animate-bounce">
-        <span className="text-[10px] uppercase tracking-[0.5em] font-bold">Scroll</span>
-        <div className="w-px h-8 sm:h-10 bg-white/20"></div>
-      </div>
     </section>
   );
 };
