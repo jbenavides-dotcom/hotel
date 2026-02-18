@@ -43,3 +43,29 @@ export const trackSocialClick = (network: string) => {
     page: window.location.pathname,
   });
 };
+
+export const initScrollTracking = () => {
+  if (typeof window === 'undefined') return;
+  const thresholds = [25, 50, 75, 90];
+  const fired = new Set<number>();
+
+  const handleScroll = () => {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    if (docHeight <= 0) return;
+    const percent = Math.round((scrollTop / docHeight) * 100);
+
+    for (const t of thresholds) {
+      if (percent >= t && !fired.has(t)) {
+        fired.add(t);
+        trackEvent('scroll_depth', {
+          event_category: 'engagement',
+          event_label: `${t}%`,
+          page: window.location.pathname,
+        });
+      }
+    }
+  };
+
+  window.addEventListener('scroll', handleScroll, { passive: true });
+};
