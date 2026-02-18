@@ -4,11 +4,11 @@ declare global {
   }
 }
 
-const LANDING_PAGE = 'coffee_tour';
+const LP = 'coffee_tour';
 
 export const trackEvent = (eventName: string, params?: Record<string, string>) => {
   if (typeof window !== 'undefined' && window.gtag) {
-    window.gtag('event', eventName, { ...params, landing_page: LANDING_PAGE });
+    window.gtag('event', `${LP}__${eventName}`, { ...params, landing_page: LP });
   }
 };
 
