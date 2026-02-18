@@ -6,6 +6,7 @@ import TourSection from './components/TourSection';
 import LocationSection from './components/LocationSection';
 import { BOOKING_URL, ASSETS, SOCIAL_LINKS, CONTACT_INFO, COFFEE_TOUR_INFO } from './constants';
 import { MessageCircle } from 'lucide-react';
+import { trackWhatsAppClick, trackEmailClick, trackPhoneClick, trackSocialClick } from './hooks/useAnalytics';
 
 const App: React.FC = () => {
   return (
@@ -57,6 +58,7 @@ const App: React.FC = () => {
                 rel="noopener noreferrer"
                 className="bg-[#25D366] hover:bg-[#128C7E] text-white px-10 sm:px-16 py-5 sm:py-6 font-bold uppercase text-xs tracking-widest flex items-center justify-center gap-3 transition-all shadow-2xl active:scale-95 w-full sm:w-auto rounded-xl"
                 aria-label="Reservar Coffee Tour por WhatsApp"
+                onClick={() => trackWhatsAppClick('cta_final')}
               >
                 <MessageCircle className="w-6 h-6" />
                 Reservar por WhatsApp - {COFFEE_TOUR_INFO.price}
@@ -83,11 +85,11 @@ const App: React.FC = () => {
               Estamos ubicados en Zipacón, Cundinamarca, en medio de cafetales de agricultura regenerativa en la finca La Palma & El Tucán.
             </p>
             <div className="flex flex-wrap gap-6 sm:gap-8 lg:gap-10 text-white/40 font-bold text-[10px] uppercase tracking-widest">
-              <a href={SOCIAL_LINKS.instagram} target="_blank" rel="noopener noreferrer" className="hover:text-brand-pink transition-colors">Instagram</a>
-              <a href={SOCIAL_LINKS.facebook} target="_blank" rel="noopener noreferrer" className="hover:text-brand-pink transition-colors">Facebook</a>
-              <a href={SOCIAL_LINKS.tiktok} target="_blank" rel="noopener noreferrer" className="hover:text-brand-pink transition-colors">TikTok</a>
-              <a href={SOCIAL_LINKS.linkedin} target="_blank" rel="noopener noreferrer" className="hover:text-brand-pink transition-colors">LinkedIn</a>
-              <a href={SOCIAL_LINKS.website} target="_blank" rel="noopener noreferrer" className="hover:text-brand-pink transition-colors">Website</a>
+              <a href={SOCIAL_LINKS.instagram} target="_blank" rel="noopener noreferrer" className="hover:text-brand-pink transition-colors" onClick={() => trackSocialClick('instagram')}>Instagram</a>
+              <a href={SOCIAL_LINKS.facebook} target="_blank" rel="noopener noreferrer" className="hover:text-brand-pink transition-colors" onClick={() => trackSocialClick('facebook')}>Facebook</a>
+              <a href={SOCIAL_LINKS.tiktok} target="_blank" rel="noopener noreferrer" className="hover:text-brand-pink transition-colors" onClick={() => trackSocialClick('tiktok')}>TikTok</a>
+              <a href={SOCIAL_LINKS.linkedin} target="_blank" rel="noopener noreferrer" className="hover:text-brand-pink transition-colors" onClick={() => trackSocialClick('linkedin')}>LinkedIn</a>
+              <a href={SOCIAL_LINKS.website} target="_blank" rel="noopener noreferrer" className="hover:text-brand-pink transition-colors" onClick={() => trackSocialClick('website')}>Website</a>
             </div>
           </div>
 
@@ -103,8 +105,8 @@ const App: React.FC = () => {
           <div>
             <h5 className="text-brand-pink font-bold uppercase tracking-[0.3em] text-[10px] mb-6 sm:mb-8 lg:mb-10">Contacto</h5>
             <div className="text-white/50 text-xs leading-loose font-medium flex flex-col gap-2">
-              <a href={`mailto:${CONTACT_INFO.email}`} className="hover:text-white transition-colors break-all sm:break-normal">{CONTACT_INFO.email}</a>
-              <a href={`tel:${CONTACT_INFO.phone}`} className="hover:text-white transition-colors">{CONTACT_INFO.phoneDisplay}</a>
+              <a href={`mailto:${CONTACT_INFO.email}`} className="hover:text-white transition-colors break-all sm:break-normal" onClick={() => trackEmailClick('footer')}>{CONTACT_INFO.email}</a>
+              <a href={`tel:${CONTACT_INFO.phone}`} className="hover:text-white transition-colors" onClick={() => trackPhoneClick('footer')}>{CONTACT_INFO.phoneDisplay}</a>
               <p>{CONTACT_INFO.address}</p>
             </div>
           </div>
@@ -129,6 +131,7 @@ const App: React.FC = () => {
         rel="noopener noreferrer"
         className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-[60] w-14 h-14 sm:w-16 sm:h-16 bg-[#25D366] text-white rounded-full shadow-2xl flex items-center justify-center hover:scale-110 hover:bg-[#128C7E] active:scale-95 transition-all duration-300"
         aria-label="Contactar por WhatsApp"
+        onClick={() => trackWhatsAppClick('floating_button')}
       >
         <MessageCircle className="w-6 h-6 sm:w-7 sm:h-7" />
       </a>

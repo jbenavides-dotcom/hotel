@@ -3,6 +3,7 @@ import React from 'react';
 import { TOUR_STEPS, BOOKING_URL, ASSETS, COFFEE_TOUR_INFO } from '../constants';
 import { Award, ChevronRight, Check, MessageCircle, Coffee, TreePine, Users, Sparkles, Leaf, GlassWater } from 'lucide-react';
 import { useScrollReveal } from '../hooks/useScrollReveal';
+import { trackWhatsAppClick } from '../hooks/useAnalytics';
 
 const TourSection: React.FC = () => {
   const whyReveal = useScrollReveal();
@@ -113,6 +114,7 @@ const TourSection: React.FC = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-8 sm:mt-10 inline-flex items-center gap-3 bg-[#25D366] text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-bold uppercase text-xs tracking-widest hover:bg-[#128C7E] transition-all shadow-lg active:scale-95"
+                onClick={() => trackWhatsAppClick('tour_includes')}
               >
                 <MessageCircle className="w-5 h-5" />
                 Reservar por WhatsApp
@@ -183,6 +185,7 @@ const TourSection: React.FC = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-brand-pink font-bold uppercase text-[10px] tracking-widest border-b-2 border-brand-pink pb-2 hover:gap-4 transition-all"
+              onClick={() => trackWhatsAppClick('tour_innovation')}
             >
               Reservar Mi Lugar <ChevronRight className="w-4 h-4" />
             </a>
