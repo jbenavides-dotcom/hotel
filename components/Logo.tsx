@@ -1,29 +1,10 @@
-
-import React from 'react';
-
 interface LogoProps {
-  className?: string;
-  variant?: 'dark' | 'light' | 'pink' | 'gold';
-  showBadge?: boolean;
+  variant?: 'light' | 'dark';
+  size?: 'sm' | 'md' | 'lg';
 }
-
-// Logo imagen de Cloudinary
-const LOGO_URL = "https://res.cloudinary.com/dsylu9a7k/image/upload/lpet/logo.png";
-
-const Logo: React.FC<LogoProps> = ({
-  className = "w-24 h-24",
-  variant = 'pink',
-  showBadge = false
-}) => {
-  return (
-    <div className={`relative flex items-center justify-center ${className}`}>
-      <img
-        src={LOGO_URL}
-        alt="La Palma & El Tucán Logo"
-        className="w-full h-full object-contain"
-      />
-    </div>
-  );
-};
-
-export default Logo;
+const LOGO_DARK = 'https://res.cloudinary.com/dkqocgknd/image/upload/f_auto,q_auto/lpet/logo-hotel-svg.svg';
+const LOGO_LIGHT = 'https://res.cloudinary.com/dkqocgknd/image/upload/f_auto,q_auto/lpet/logo-hotel-light.svg';
+export default function Logo({ variant = 'dark', size = 'md' }: LogoProps) {
+  const heights = { sm: 'h-8', md: 'h-10 sm:h-12', lg: 'h-12 sm:h-14 lg:h-16' };
+  return <img src={variant === 'light' ? LOGO_LIGHT : LOGO_DARK} alt="La Palma & El Tucán Hotel" className={`${heights[size]} w-auto object-contain`} />;
+}

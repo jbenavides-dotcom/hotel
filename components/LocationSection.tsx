@@ -1,11 +1,12 @@
 
 import React from 'react';
-import { ASSETS } from '../constants';
 import { Navigation } from 'lucide-react';
 import { useScrollReveal } from '../hooks/useScrollReveal';
+import { useI18n } from '../i18n';
 
 const LocationSection: React.FC = () => {
   const reveal = useScrollReveal();
+  const { t } = useI18n();
 
   return (
     <section id="location" className="py-16 sm:py-24 lg:py-32 bg-brand-light">
@@ -16,9 +17,9 @@ const LocationSection: React.FC = () => {
             <div className="relative z-10 max-w-xl mx-auto">
                 <div className="bg-white/5 p-8 sm:p-10 lg:p-16 rounded-2xl sm:rounded-[2rem] lg:rounded-[3rem] border border-white/10 flex flex-col items-center justify-center text-center">
                     <Navigation className="w-12 h-12 sm:w-14 sm:h-14 lg:w-20 lg:h-20 text-brand-pink mb-6 sm:mb-8 lg:mb-10" />
-                    <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif mb-4 sm:mb-6 italic">Ubicación Estratégica</h2>
+                    <h2 className="text-2xl sm:text-3xl lg:text-4xl font-serif mb-4 sm:mb-6 italic">{t('location.subtitle')}</h2>
                     <p className="text-white/60 mb-8 sm:mb-10 lg:mb-12 text-sm sm:text-base leading-relaxed max-w-md">
-                        Estamos ubicados en el municipio de Zipacón, Cundinamarca. Un refugio de paz a solo 90 minutos de Bogotá.
+                        {t('location.desc')}
                     </p>
                     <a
                         href="https://maps.app.goo.gl/sdUhnJ25tacUYt77A"
@@ -27,7 +28,7 @@ const LocationSection: React.FC = () => {
                         className="bg-brand-pink text-white px-10 sm:px-12 lg:px-14 py-4 sm:py-5 font-bold uppercase text-[10px] sm:text-xs tracking-widest hover:bg-white hover:text-brand-pink transition-all shadow-xl active:scale-95 rounded-xl"
                         aria-label="Ver ubicación de La Palma & El Tucán en Google Maps"
                     >
-                        Ver en Google Maps
+                        {t('location.maps')}
                     </a>
                 </div>
             </div>
